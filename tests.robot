@@ -6,8 +6,8 @@ Test Teardown    Run Keyword If Test Failed    Capture Page Screenshot
 
 *** Variables ***
 ${PARABANK_URL}     https://parabank.parasoft.com/parabank/index.htm
-${VALID_USERNAME}   akash7
-${VALID_PASSWORD}   akash8
+${VALID_USERNAME}   #write your user name
+${VALID_PASSWORD}   #password 
 ${BROWSER}          Chrome
 
 *** Test Cases ***
