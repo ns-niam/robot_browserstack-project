@@ -2,8 +2,8 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.safari.options import Options as SafariOptions
 
-USERNAME = 'niam_yutm1k'
-ACCESS_KEY = 'SEqps1iWcWC7Jca2NZTh'
+USERNAME = 'browserstack user'
+ACCESS_KEY = 'browserstack accesskey'
 
 def get_browserstack_url():
     return f"https://{USERNAME}:{ACCESS_KEY}@hub-cloud.browserstack.com/wd/hub"
