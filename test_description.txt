@@ -1,0 +1,18 @@
+Test Case Descriptions:
+
+1. Successful Account Login
+   - Purpose: Verify that a user can successfully log in to ParaBank with valid credentials
+   - Steps:
+     1. Navigate to ParaBank homepage
+     2. Enter valid username (akash2)
+     3. Enter valid password (akash3)
+     4. Click Log In button
+
+2. Balance Check
+   - Purpose: Verify that the system correctly displays account balance information
+   - Steps:
+     1. Log in successfully
+     2. Locate the first account's balance in the accounts table
+     3. Extract and clean the balance amount
+     4. Log the balance value
+     5. Log out from application

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.8 on win32)" generated="20250419 11:10:42.373" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Users\niam\coding\MTSD\robot_browserstack project\tests.robot">
+<test id="s1-t1" name="Successful Account Login" line="14">
+<kw name="Open Browser To ParaBank">
+<kw name="Get Browserstack Url" library="browserstack_config">
+<var>${remote_url}</var>
+<msg timestamp="20250419 11:10:55.676" level="INFO">${remote_url} = https://niam_yutm1k:SEqps1iWcWC7Jca2NZTh@hub-cloud.browserstack.com/wd/hub</msg>
+<status status="PASS" starttime="20250419 11:10:55.676" endtime="20250419 11:10:55.676"/>
+</kw>
+<kw name="Get Browser Options" library="browserstack_config">
+<var>${options}</var>
+<arg>${BROWSER}</arg>
+<msg timestamp="20250419 11:10:55.676" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000192C2207830&gt;</msg>
+<status status="PASS" starttime="20250419 11:10:55.676" endtime="20250419 11:10:55.676"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${PARABANK_URL}</arg>
+<arg>browser=${BROWSER.lower()}</arg>
+<arg>remote_url=${remote_url}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250419 11:10:55.676" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm' through remote server at 'https://niam_yutm1k:SEqps1iWcWC7Jca2NZTh@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg timestamp="20250419 11:10:58.810" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20250419 11:10:58.810" level="INFO">C:\Users\niam\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py:418: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+  headers = self.get_remote_connection_headers(parsed_url, self._client_config.keep_alive)</msg>
+<msg timestamp="20250419 11:10:58.810" level="FAIL">WebDriverException: Message: Automate testing time expired.
+</msg>
+<status status="FAIL" starttime="20250419 11:10:55.676" endtime="20250419 11:11:07.190"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1280</arg>
+<arg>1024</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" starttime="20250419 11:11:07.190" endtime="20250419 11:11:07.190"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>30 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" starttime="20250419 11:11:07.190" endtime="20250419 11:11:07.190"/>
+</kw>
+<status status="FAIL" starttime="20250419 11:10:55.676" endtime="20250419 11:11:07.190"/>
+</kw>
+<kw name="Login With Credentials">
+<arg>${VALID_USERNAME}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="NOT RUN" starttime="20250419 11:11:07.190" endtime="20250419 11:11:07.190"/>
+</kw>
+<kw name="Verify Accounts Overview Page Loaded">
+<status status="NOT RUN" starttime="20250419 11:11:07.190" endtime="20250419 11:11:07.190"/>
+</kw>
+<kw name="Run Keyword If Test Failed" library="BuiltIn" type="TEARDOWN">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20250419 11:11:07.206" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20250419 11:11:07.206" endtime="20250419 11:11:07.206"/>
+</kw>
+<status status="PASS" starttime="20250419 11:11:07.190" endtime="20250419 11:11:07.206"/>
+</kw>
+<doc>Verify user can login</doc>
+<status status="FAIL" starttime="20250419 11:10:55.660" endtime="20250419 11:11:07.206">WebDriverException: Message: Automate testing time expired.
+</status>
+</test>
+<test id="s1-t2" name="Balance Check" line="20">
+<kw name="Open Browser To ParaBank">
+<kw name="Get Browserstack Url" library="browserstack_config">
+<var>${remote_url}</var>
+<msg timestamp="20250419 11:11:07.215" level="INFO">${remote_url} = https://niam_yutm1k:SEqps1iWcWC7Jca2NZTh@hub-cloud.browserstack.com/wd/hub</msg>
+<status status="PASS" starttime="20250419 11:11:07.215" endtime="20250419 11:11:07.215"/>
+</kw>
+<kw name="Get Browser Options" library="browserstack_config">
+<var>${options}</var>
+<arg>${BROWSER}</arg>
+<msg timestamp="20250419 11:11:07.215" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000192C222F7D0&gt;</msg>
+<status status="PASS" starttime="20250419 11:11:07.215" endtime="20250419 11:11:07.215"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${PARABANK_URL}</arg>
+<arg>browser=${BROWSER.lower()}</arg>
+<arg>remote_url=${remote_url}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250419 11:11:07.235" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm' through remote server at 'https://niam_yutm1k:SEqps1iWcWC7Jca2NZTh@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg timestamp="20250419 11:11:10.325" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20250419 11:11:10.325" level="FAIL">WebDriverException: Message: Automate testing time expired.
+</msg>
+<status status="FAIL" starttime="20250419 11:11:07.215" endtime="20250419 11:11:10.325"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1280</arg>
+<arg>1024</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" starttime="20250419 11:11:10.325" endtime="20250419 11:11:10.325"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>30 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" starttime="20250419 11:11:10.325" endtime="20250419 11:11:10.325"/>
+</kw>
+<status status="FAIL" starttime="20250419 11:11:07.215" endtime="20250419 11:11:10.325"/>
+</kw>
+<kw name="Login With Credentials">
+<arg>${VALID_USERNAME}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="NOT RUN" starttime="20250419 11:11:10.325" endtime="20250419 11:11:10.325"/>
+</kw>
+<kw name="Get Account Balance">
+<var>${balance}</var>
+<status status="NOT RUN" starttime="20250419 11:11:10.325" endtime="20250419 11:11:10.325"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Account Balance: ${balance}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20250419 11:11:10.325" endtime="20250419 11:11:10.325"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${balance}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" starttime="20250419 11:11:10.341" endtime="20250419 11:11:10.341"/>
+</kw>
+<kw name="Logout From Application">
+<status status="NOT RUN" starttime="20250419 11:11:10.341" endtime="20250419 11:11:10.341"/>
+</kw>
+<kw name="Run Keyword If Test Failed" library="BuiltIn" type="TEARDOWN">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20250419 11:11:10.341" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20250419 11:11:10.341" endtime="20250419 11:11:10.341"/>
+</kw>
+<status status="PASS" starttime="20250419 11:11:10.341" endtime="20250419 11:11:10.341"/>
+</kw>
+<doc>View account balance</doc>
+<status status="FAIL" starttime="20250419 11:11:07.206" endtime="20250419 11:11:10.341">WebDriverException: Message: Automate testing time expired.
+</status>
+</test>
+<status status="FAIL" starttime="20250419 11:10:42.452" endtime="20250419 11:11:10.341"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Tests">Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
